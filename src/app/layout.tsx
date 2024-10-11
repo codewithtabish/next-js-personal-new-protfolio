@@ -3,7 +3,7 @@
 import type { Metadata } from 'next';
 // import localFont from 'next/font/local';
 import './globals.css';
-import { outfit } from '@/ui/fonts';
+import { lusitana, outfit } from '@/ui/fonts';
 import Navbar from '@/components/custom/Navbar';
 import { ThemeProvider } from 'next-themes';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${outfit.className} antialiased`}
+        className={`${lusitana.className} antialiased`}
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
