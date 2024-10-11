@@ -1,12 +1,13 @@
 /** @format */
 
 import React from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+// import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Markdown from 'react-markdown';
 import BlurFade from '@/components/ui/blur-fade';
 import { DATA } from '@/data/resume';
+import { PersonalInfoInterface } from '@/types';
 
-const HeroAboutSection = () => {
+const HeroAboutSection = ({ info }: { info: PersonalInfoInterface }) => {
   //   const response = await fetch('http://localhost:3000/api/peronalinfo', {
   // cache: 'force-cache',
   //   });
@@ -20,7 +21,7 @@ const HeroAboutSection = () => {
       </BlurFade>
       <BlurFade delay={BLUR_FADE_DELAY * 4}>
         <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert'>
-          {DATA?.summary}
+          {info?.bio}
         </Markdown>
       </BlurFade>
     </div>

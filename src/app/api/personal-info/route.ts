@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
     // Extract the JSON data from the request body
     const { name, subtitle, bio, profile_image, contact_email, social_links } =
       await request.json();
+    console.log('This is me ');
 
     // Validate that required parameters are provided
     const missingFields: string[] = [];

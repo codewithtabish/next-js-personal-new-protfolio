@@ -6,8 +6,9 @@ import BlurFadeText from './blur-fade-text'; // default export
 import { Avatar, AvatarImage } from './avatar'; // named exports
 
 import { DATA } from '@/data/resume';
+import { PersonalInfoInterface } from '@/types';
 
-const HeroInfoSection = () => {
+const HeroInfoSection = ({ info }: { info: PersonalInfoInterface }) => {
   // const response = await fetch('http://localhost:3000/api/peronalinfo', {
   //   cache: 'force-cache',
   // });
@@ -22,14 +23,14 @@ const HeroInfoSection = () => {
             delay={BLUR_FADE_DELAY}
             className='text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'
             yOffset={8}
-            text={`Hi, I'm ${DATA?.name?.split(' ')[0]} 👋`}
+            text={`Hi, I'm ${info?.name?.split(' ')[0]} 👋`}
           />
           <BlurFadeText
             // animateByCharacter={true}
             // characterDelay={0.05}
             className='max-w-[600px] overflow-x-hidden md:text-xl'
             delay={BLUR_FADE_DELAY}
-            text={DATA.description}
+            text={info?.subtitle}
           />
         </div>
         <BlurFade delay={BLUR_FADE_DELAY}>
@@ -37,7 +38,8 @@ const HeroInfoSection = () => {
             <AvatarImage
               className='object-cover'
               alt={DATA.name}
-              src={DATA.avatarUrl}
+              // src='/images/imageone.png'
+              src={info.profile_image || '/images/imageone.png'}
             />
             {/* <AvatarFallback>{DATA.initials}</AvatarFallback> */}
           </Avatar>
