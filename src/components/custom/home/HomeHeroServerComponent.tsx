@@ -9,7 +9,7 @@ const HomeHeroServerComponent = async () => {
 
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/personal-info`,
+      `https://next-js-personal-new-protfolio.vercel.app/api/personal-info`,
       {
         cache: 'reload', // You can change this to 'no-store' for uncached fetches
       }
