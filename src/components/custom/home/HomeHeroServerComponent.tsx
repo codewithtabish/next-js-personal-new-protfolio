@@ -43,21 +43,21 @@ const HomeHeroServerComponent = async () => {
     );
 
     if (!response.status) {
-      throw new Error('Failed to fetch personal info');
+      throw new Error('Failed to fetch Education info');
     }
 
     const data = await response.json();
     education = data.educations;
   } catch (error) {
     let education = null;
-    console.error('Error fetching personal Education:', error);
+    console.error('Error fetching  Education:', error);
     // Optionally handle or display the error state here
   }
 
   // Fallback content in case info is null or error occurs
   if (!education) {
     return (
-      <div>Error loading personal information. Please try again later.</div>
+      <div>Error loading educationl information. Please try again later.</div>
     );
   }
 
