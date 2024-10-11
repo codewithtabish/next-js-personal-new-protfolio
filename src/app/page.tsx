@@ -1,5 +1,6 @@
 /** @format */
 
+import EducationList from '@/components/custom/home/EducationList';
 import HeroAboutSection from '@/components/custom/home/HeroAboutSection';
 import HeroInfoSection from '@/components/custom/home/HeroInfoSection';
 import HomeHeroServerComponent from '@/components/custom/home/HomeHeroServerComponent';
@@ -10,6 +11,7 @@ const HomePage = () => {
   return (
     <main className='flex flex-col min-h-screen py-16 max-w-3xl mx-auto space-y-10 md:px-2 px-5'>
       <HomeHeroServerComponent />
+      <div>{/* <EducationList /> */}</div>
     </main>
   );
 };

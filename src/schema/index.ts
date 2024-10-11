@@ -1,6 +1,12 @@
 /** @format */
 
-import { PersonalInfo, Projects, Skills, Testimonials } from './schema';
+import {
+  Education,
+  PersonalInfo,
+  Projects,
+  Skills,
+  Testimonials,
+} from './schema';
 
 /** @format */
 const myschema = {
@@ -8,5 +14,6 @@ const myschema = {
   Projects,
   Skills,
   Testimonials,
+  Education,
 };
 export default myschema;
