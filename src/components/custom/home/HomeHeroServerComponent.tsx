@@ -11,7 +11,7 @@ const HomeHeroServerComponent = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/personal-info`,
       {
-        cache: 'default', // You can change this to 'no-store' for uncached fetches
+        cache: 'reload', // You can change this to 'no-store' for uncached fetches
       }
     );
 

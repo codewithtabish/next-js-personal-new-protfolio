@@ -39,7 +39,8 @@ const HeroInfoSection = ({ info }: { info: PersonalInfoInterface }) => {
               className='object-cover'
               alt={DATA.name}
               // src='/images/imageone.png'
-              src={info.profile_image || '/images/imageone.png'}
+              src={info.profile_image}
+              // || '/images/imageone.png'}
             />
             {/* <AvatarFallback>{DATA.initials}</AvatarFallback> */}
           </Avatar>
