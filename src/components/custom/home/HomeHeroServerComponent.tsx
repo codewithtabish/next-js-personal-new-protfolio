@@ -9,6 +9,8 @@ import { SkillIcons } from './SkillCard';
 import SkillSections from './SkillList';
 import ProjectList from './ProjectList';
 import GETInTouch from './GETInTouch';
+import FeedbackList from './FeedbackList';
+import BlurFade from '@/components/ui/blur-fade';
 
 const HomeHeroServerComponent = async () => {
   let info = null;
@@ -16,6 +18,7 @@ const HomeHeroServerComponent = async () => {
   let experience = null;
   let skills = null;
   let projects = null;
+  let feedbacks = null;
 
   try {
     const response = await fetch(
@@ -139,6 +142,29 @@ const HomeHeroServerComponent = async () => {
       <div>Error loading projects information. Please try again later.</div>
     );
   }
+  // testimonials PART
+  // PROJECTS PART
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/feedback`);
+
+    if (!response.status) {
+      throw new Error('Failed to fetch Skills Testimonials ');
+    }
+
+    const data = await response?.json();
+    feedbacks = data?.testimonials;
+  } catch (error) {
+    feedbacks = null;
+    console.error('Error fetching  testimonials:', error);
+    // Optionally handle or display the error state here
+  }
+
+  // Fallback content in case info is null or error occurs
+  if (!feedbacks) {
+    return (
+      <div>Error loading feedbacks information. Please try again later.</div>
+    );
+  }
 
   return (
     <section className='space-y-14'>
@@ -152,6 +178,12 @@ const HomeHeroServerComponent = async () => {
       </section>
       <section>
         <ProjectList projects={projects} />
+      </section>
+      <section>
+        {/* <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <h2 className='text-xl font-bold'>Feedbacks</h2>
+        </BlurFade> */}
+        <FeedbackList feedbacks={feedbacks} />
       </section>
       <GETInTouch />
 
