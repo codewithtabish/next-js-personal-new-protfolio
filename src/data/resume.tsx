@@ -3,7 +3,7 @@ import { Icons } from '@/components/ui/icons';
 import { HomeIcon, NotebookIcon, Projector } from 'lucide-react';
 
 export const DATA = {
-  name: 'Tabish',
+  name: 'Talha Tabish',
   initials: 'DV',
   url: 'https://dillion.io',
   location: 'San Francisco, CA',
