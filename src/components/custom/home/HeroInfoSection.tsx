@@ -23,7 +23,7 @@ const HeroInfoSection = ({ info }: { info: PersonalInfoInterface }) => {
             delay={BLUR_FADE_DELAY}
             className='text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'
             yOffset={8}
-            text={`Hi, I'm ${info?.name?.split(' ')[0]} 👋`}
+            text={`Hi, I'm ${info?.name?.split(' ')[1]} 👋`}
           />
           <BlurFadeText
             // animateByCharacter={true}

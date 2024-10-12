@@ -9,6 +9,7 @@ import {
   timestamp,
   uuid,
   json,
+  boolean,
 } from 'drizzle-orm/pg-core';
 
 // Define User Table
@@ -27,12 +28,15 @@ export const Projects = pgTable('projects', {
   id: uuid('id').primaryKey().defaultRandom(),
   title: varchar('title', { length: 255 }),
   description: text('description'),
+  githubRepoLink: text('githubRepoLink'),
+  isPublic: boolean('isPublic').default(false),
   tech_stack: json('tech_stack'),
   project_link: varchar('project_link', { length: 255 }),
   image: varchar('image', { length: 255 }).notNull(),
   video_url: varchar('video_url', { length: 255 }), // New video URL field
   type: varchar('type', { length: 50 }), // Android, Web, Backend
   start_date: timestamp('start_date').notNull(),
+
   end_date: timestamp('end_date').notNull(),
 });
 
