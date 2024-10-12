@@ -11,6 +11,7 @@ import ProjectList from './ProjectList';
 import GETInTouch from './GETInTouch';
 import FeedbackList from './FeedbackList';
 import BlurFade from '@/components/ui/blur-fade';
+import HackathonList from './HackathonList';
 
 const HomeHeroServerComponent = async () => {
   let info = null;
@@ -185,6 +186,7 @@ const HomeHeroServerComponent = async () => {
         </BlurFade> */}
         <FeedbackList feedbacks={feedbacks} />
       </section>
+      <HackathonList />
       <GETInTouch />
 
       {/* {JSON.stringify(experience)} */}

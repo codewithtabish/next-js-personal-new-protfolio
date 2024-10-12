@@ -97,7 +97,7 @@ export default function FeedbackList({ feedbacks }: { feedbacks: any }) {
   const BLUR_FADE_DELAY = 0.04;
 
   return (
-    <div className='relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl'>
+    <div className='relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden '>
       <BlurFade delay={BLUR_FADE_DELAY * 5}>
         <h2 className='text-xl font-bold my-4'>What Our Clients Say</h2>
       </BlurFade>
