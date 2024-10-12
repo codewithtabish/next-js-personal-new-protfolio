@@ -8,7 +8,7 @@ const BlogsDashBoard = ({ children }: { children: React.ReactNode }) => {
     <>
       {/* Metadata for SEO */}
       <Head>
-        <title>Blogs | Tabish's Blog </title>
+        <title>Blogs | Tabish's Blog</title>
         <meta
           name='description'
           content='Read insightful articles and blogs on Full Stack Development, Android, React Native, and Data Engineering by Tabish.'
@@ -82,7 +82,14 @@ const BlogsDashBoard = ({ children }: { children: React.ReactNode }) => {
       </Head>
 
       {/* Blog Content */}
-      <div>{children}</div>
+      <div className='container mx-auto p-4'>
+        <h1 className='text-3xl font-bold mb-4'>Welcome to My Blog</h1>
+        <p className='mb-6'>
+          Here, you'll find insightful articles on Full Stack Development,
+          Android, React Native, and Data Engineering. Enjoy reading!
+        </p>
+        <div>{children}</div>
+      </div>
     </>
   );
 };

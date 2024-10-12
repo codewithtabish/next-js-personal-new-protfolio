@@ -82,7 +82,14 @@ const ProjectLayout = ({ children }: { children: React.ReactNode }) => {
       </Head>
 
       {/* Project Content */}
-      <div>{children}</div>
+      <div className='container mx-auto p-4'>
+        <h1 className='text-3xl font-bold mb-4'>My Projects</h1>
+        <p className='mb-6'>
+          Discover the various projects I’ve worked on, showcasing my skills in
+          Full Stack Development, Android, and React Native.
+        </p>
+        <div>{children}</div>
+      </div>
     </>
   );
 };

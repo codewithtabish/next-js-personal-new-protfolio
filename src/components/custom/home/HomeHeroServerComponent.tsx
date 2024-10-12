@@ -173,22 +173,22 @@ const HomeHeroServerComponent = async () => {
   return (
     <>
       <Head>
-        <title>Tabish's Portfolio</title>
+        <title>Tabish Talha's Portfolio</title>
         <meta
           name='description'
-          content="Explore Tabish's journey as a Full Stack Developer, Android, and React Native expert."
+          content='Explore the journey of Tabish Talha, a Full Stack Developer specializing in Android and React Native.'
         />
         <meta
           name='keywords'
-          content='Tabish, Portfolio, Full Stack Developer, Android Developer, React Native, Projects'
+          content='Tabish, Talha, Talha Tabish, Portfolio, Full Stack Developer, Android Developer, React Native, Projects'
         />
         <meta
           property='og:title'
-          content="Tabish's Portfolio"
+          content="Tabish Talha's Portfolio"
         />
         <meta
           property='og:description'
-          content="Showcasing Tabish's skills, experience, and projects in software development."
+          content="Showcasing Tabish Talha's skills, experience, and projects in software development."
         />
         <meta
           property='og:url'
@@ -204,11 +204,11 @@ const HomeHeroServerComponent = async () => {
         />
         <meta
           property='twitter:title'
-          content="Tabish's Portfolio"
+          content="Tabish Talha's Portfolio"
         />
         <meta
           property='twitter:description'
-          content="Explore Tabish's journey in software development."
+          content="Explore Tabish Talha's journey in software development."
         />
         <meta
           property='twitter:image'
@@ -220,7 +220,7 @@ const HomeHeroServerComponent = async () => {
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Tabish',
+            name: 'Tabish Talha',
             jobTitle: 'Full Stack Developer',
             url: 'https://www.codewithtabish.com',
             sameAs: [
@@ -234,7 +234,6 @@ const HomeHeroServerComponent = async () => {
           })}
         </script>
       </Head>
-
       <section className='space-y-14'>
         <HeroInfoSection info={info} />
         <HeroAboutSection info={info} />
