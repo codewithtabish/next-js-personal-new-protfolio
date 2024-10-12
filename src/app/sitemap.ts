@@ -11,13 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://www.codewithtabish.com/about', // About page
+      url: 'https://www.codewithtabish.com/projects', // About page
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://www.codewithtabish.com/blog', // Blog page
+      url: 'https://www.codewithtabish.com/blogs', // Blog page
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7, // Adjusted priority for blog
