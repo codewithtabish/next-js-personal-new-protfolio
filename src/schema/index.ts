@@ -2,6 +2,7 @@
 
 import {
   Education,
+  Experience,
   PersonalInfo,
   Projects,
   Skills,
@@ -15,5 +16,6 @@ const myschema = {
   Skills,
   Testimonials,
   Education,
+  Experience,
 };
 export default myschema;
