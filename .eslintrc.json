@@ -8,7 +8,9 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "off",
     "react/react-in-jsx-scope": "off", // If you're using React 17+
-    "react/prop-types": "off" // If you're using TypeScript for prop types
+    "react/prop-types": "off", // If you're using TypeScript for prop types
+    "react/no-unescaped-entities": "off",
+    "import/no-anonymous-default-export": "off"
   },
   "overrides": [
     {
