@@ -73,16 +73,16 @@ const HomeHeroServerComponent = async () => {
       throw new Error('Failed to fetch Work experience ');
     }
 
-    const data = await response.json();
+    const data = await response?.json();
     experience = data.experience;
   } catch (error) {
-    let experience = null;
+    experience = null;
     console.error('Error fetching  Experience:', error);
     // Optionally handle or display the error state here
   }
 
   // Fallback content in case info is null or error occurs
-  if (!education) {
+  if (!experience) {
     return (
       <div>Error loading experience information. Please try again later.</div>
     );

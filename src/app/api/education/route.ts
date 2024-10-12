@@ -3,7 +3,6 @@
 import { db } from '@/config/db';
 import myschema from '@/schema';
 import { NextRequest, NextResponse } from 'next/server';
-import { Education } from '../../../schema/schema';
 
 export async function GET() {
   try {
