@@ -21,22 +21,41 @@ import { DATA } from '@/data/resume';
 // });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL('https://www.codewithtabish.com/'),
   title: {
     default: 'Tabish | Full Stack Developer',
     template: `%s | Tabish - Full Stack Developer`,
   },
   description:
-    "Hi, I'm Tabish 👋 Full Stack Developer | Android & React Native Developer | Data Engineer | Adaptable Problem Solver",
+    "Hi, I'm Tabish 👋 Full Stack Developer | Android & React Native Developer | Data Engineer | Adaptable Problem Solver.",
+  keywords: [
+    'Tabish',
+    'Full Stack Developer',
+    'Android Developer',
+    'React Native Developer',
+    'Web Development',
+    'Backend Development',
+    'Data Engineer',
+    'Software Engineer',
+    'Programming',
+    'Technology',
+    'Portfolio',
+    'Code With Tabish',
+    'Code With Talha',
+    'Code With Talh',
+    'Code with',
+    'Talha',
+    'Tabish Talha',
+  ],
   openGraph: {
-    title: 'Tabish | Full Stack Developer',
+    title: 'Talha Tabish | Full Stack Developer',
     description:
       'I am a dedicated software engineer specializing in Android development, React Native, backend, and web development. Passionate about creating efficient, user-centric solutions.',
-    url: DATA.url,
-    siteName: 'Tabish Portfolio',
+    url: 'https://www.codewithtabish.com/',
+    siteName: 'Talha Tabish Portfolio',
     images: [
       {
-        url: '/og-image.jpg', // Your portfolio's open graph image
+        url: 'https://www.codewithtabish.com/og-image.jpg', // Portfolio's Open Graph image
         width: 1200,
         height: 630,
         alt: 'Tabish Portfolio',
@@ -59,7 +78,9 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Tabish | Full Stack Developer',
     card: 'summary_large_image',
-    images: ['/twitter-image.jpg'], // Twitter-specific image for sharing
+    images: [
+      'https://images.pexels.com/photos/6771740/pexels-photo-6771740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    ], // Twitter-specific image
   },
   verification: {
     google: '', // Add your Google verification code
