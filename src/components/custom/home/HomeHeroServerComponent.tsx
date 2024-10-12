@@ -5,11 +5,14 @@ import HeroInfoSection from './HeroInfoSection';
 import HeroAboutSection from './HeroAboutSection';
 import EducationList from './EducationList';
 import ExperienceList from './ExperienceList';
+import { SkillIcons } from './SkillCard';
+import SkillSections from './SkillList';
 
 const HomeHeroServerComponent = async () => {
   let info = null;
   let education = null;
   let experience = null;
+  let skills = null;
 
   try {
     const response = await fetch(
@@ -87,6 +90,29 @@ const HomeHeroServerComponent = async () => {
       <div>Error loading experience information. Please try again later.</div>
     );
   }
+  // SKILLS PART
+  // SKILLS PART
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/skill`, {
+      cache: 'no-cache', // You can change this to 'no-store' for uncached fetches
+    });
+
+    if (!response.status) {
+      throw new Error('Failed to fetch Skills experience ');
+    }
+
+    const data = await response?.json();
+    skills = data?.data;
+  } catch (error) {
+    skills = null;
+    console.error('Error fetching  Skills:', error);
+    // Optionally handle or display the error state here
+  }
+
+  // Fallback content in case info is null or error occurs
+  if (!skills) {
+    return <div>Error loading skills information. Please try again later.</div>;
+  }
 
   return (
     <section className='space-y-14'>
@@ -94,6 +120,11 @@ const HomeHeroServerComponent = async () => {
       <HeroAboutSection info={info} />
       <EducationList education={education} />
       <ExperienceList experience={experience} />
+      <section>
+        <SkillIcons />
+        <SkillSections skills={skills} />
+      </section>
+
       {/* {JSON.stringify(experience)} */}
     </section>
   );
