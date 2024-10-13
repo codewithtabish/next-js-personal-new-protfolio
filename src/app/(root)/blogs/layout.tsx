@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Head from 'next/head';
+import BlogSidebar from '@/components/custom/blog/BlogSidebar';
 
 const BlogsDashBoard = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -83,12 +84,12 @@ const BlogsDashBoard = ({ children }: { children: React.ReactNode }) => {
 
       {/* Blog Content */}
       <div className='container mx-auto p-4'>
-        <h1 className='text-3xl font-bold mb-4'>Welcome to My Blog</h1>
-        <p className='mb-6'>
-          Here, you'll find insightful articles on Full Stack Development,
-          Android, React Native, and Data Engineering. Enjoy reading!
-        </p>
-        <div>{children}</div>
+        <div className='grid md:grid-cols-12'>
+          <div className='col-span-3'>
+            <BlogSidebar />
+          </div>
+          <div className='col-span-8'>{children}</div>
+        </div>
       </div>
     </>
   );

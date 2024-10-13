@@ -1,4 +1,5 @@
 /** @format */
+// 'use client';
 
 import type { Metadata } from 'next';
 // import localFont from 'next/font/local';
@@ -8,6 +9,7 @@ import Navbar from '@/components/custom/Navbar';
 import { ThemeProvider } from 'next-themes';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { DATA } from '@/data/resume';
+import Script from 'next/script';
 
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
@@ -102,10 +104,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${lusitana.className} antialiased`}
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        {/* Add the Google AdSense script here */}
+        {/* <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5517689121320829'
+          crossorigin='anonymous'
+        ></script> */}
+        <Script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5517689121320829'
+          crossOrigin='anonymous'
+        ></Script>
+      </head>
+      <body className={`${lusitana.className} antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='light'
