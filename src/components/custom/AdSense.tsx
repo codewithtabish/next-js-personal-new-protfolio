@@ -19,3 +19,11 @@ const AdSense = ({ pId }: AdsenseTypes) => {
 };
 
 export default AdSense;
+
+{
+  /* <script
+  async
+  src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5517689121320829'
+  crossorigin='anonymous'
+></script>; */
+}
