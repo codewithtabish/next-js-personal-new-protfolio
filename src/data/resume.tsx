@@ -37,31 +37,33 @@ export const DATA = {
     social: {
       GitHub: {
         name: 'GitHub',
-        url: 'https://dub.sh/dillion-github',
+        url: 'https://github.com/codewithtabish',
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: 'LinkedIn',
-        url: 'https://dub.sh/dillion-linkedin',
+        url: 'https://www.linkedin.com/in/talha26/',
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: 'X',
-        url: 'https://dub.sh/dillion-twitter',
+        url: 'https://www.linkedin.com/in/talha26/',
+
+        // url: 'https://dub.sh/dillion-twitter',
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
-        name: 'Youtube',
-        url: 'https://dub.sh/dillion-youtube',
-        icon: Icons.youtube,
-        navbar: true,
-      },
+      // Youtube: {
+      //   name: 'Youtube',
+      //   url: 'https://dub.sh/dillion-youtube',
+      //   icon: Icons.youtube,
+      //   navbar: true,
+      // },
       email: {
         name: 'Send Email',
         url: '#',
@@ -350,7 +352,7 @@ export const DATA = {
         {
           title: 'Github',
           icon: <Icons.github className='h-4 w-4' />,
-          href: 'https://github.com/cryptotrends/cryptotrends',
+          href: 'https://github.com/codewithtabish/euroenterprises.git',
         },
       ],
     },
