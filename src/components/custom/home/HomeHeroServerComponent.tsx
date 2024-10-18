@@ -53,7 +53,7 @@ const HomeHeroServerComponent = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/education`,
       {
-        cache: 'force-cache', // You can change this to 'no-store' for uncached fetches
+        cache: 'no-store',
       }
     );
 
