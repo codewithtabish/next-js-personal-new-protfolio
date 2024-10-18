@@ -11,7 +11,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { DATA } from '@/data/resume';
 import Script from 'next/script';
 import AdSense from '@/components/custom/AdSense';
-
+import { Analytics } from '@vercel/analytics/react';
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
 //   variable: '--font-geist-sans',
