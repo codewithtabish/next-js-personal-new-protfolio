@@ -26,7 +26,7 @@ const HomeHeroServerComponent = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/personal-info`,
       {
-        cache: 'no-cache',
+        cache: 'no-store',
       }
     );
 
