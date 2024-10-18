@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     siteName: 'Talha Tabish Portfolio',
     images: [
       {
-        url: 'https://www.codewithtabish.com/og-image.jpg', // Portfolio's Open Graph image
+        url: 'https://res-console.cloudinary.com/dnrt7rxxb/thumbnails/v1/image/upload/v1729274068/YTk4ZGE5NThlMzQwNDEwNWE4MDU0NTVkYmI5NzJmMWZfZGJibnhs/grid_landscape', // Portfolio's Open Graph image
         width: 1200,
         height: 630,
-        alt: 'Tabish Portfolio',
+        alt: 'Talha Tabish Portfolio',
       },
     ],
     locale: 'en_US',
@@ -79,10 +79,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Tabish | Full Stack Developer',
+    title: 'Talha Tabish | Full Stack Developer',
     card: 'summary_large_image',
     images: [
-      'https://images.pexels.com/photos/6771740/pexels-photo-6771740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      'https://res-console.cloudinary.com/dnrt7rxxb/thumbnails/v1/image/upload/v1729274068/YTk4ZGE5NThlMzQwNDEwNWE4MDU0NTVkYmI5NzJmMWZfZGJibnhs/grid_landscape',
     ], // Twitter-specific image
   },
   verification: {
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     yandex: '', // Add your Yandex verification code
   },
   icons: {
-    icon: '/favone.png', // Your favicon
+    icon: 'https://res-console.cloudinary.com/dnrt7rxxb/thumbnails/v1/image/upload/v1729274068/YTk4ZGE5NThlMzQwNDEwNWE4MDU0NTVkYmI5NzJmMWZfZGJibnhs/grid_landscape', // Your favicon
     apple: '/apple-touch-icon.png', // Apple Touch Icon for iOS devices
     other: [
       { rel: 'manifest', url: '/site.webmanifest' }, // Manifest for web apps
