@@ -86,16 +86,7 @@ const BlogsDashBoard = ({ children }: { children: React.ReactNode }) => {
       <div className='max-w-4xl mx-auto p-4'>
         <div className='lg:grid md:grid-cols-12 gap-6 flex flex-col '>
           <div className='lg:col-span-10 '>{children}</div>
-          <div className='col-span-2'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            quam saepe iure, maxime consequuntur ipsum. Aliquam animi illo ipsa.
-            Culpa tempora accusamus, magnam explicabo inventore debitis placeat
-            corporis nam deserunt. Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Corporis quam saepe iure, maxime consequuntur
-            ipsum. Aliquam animi illo ipsa. Culpa tempora accusamus, magnam
-            explicabo inventore debitis placeat corporis nam deserunt.
-            {/* <BlogSidebar /> */}
-          </div>
+          <div className='lg:col-span-2'></div>
         </div>
       </div>
     </>

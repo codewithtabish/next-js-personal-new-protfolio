@@ -2,39 +2,46 @@
 
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+const baseUrl = 'https://www.codewithtabish.com';
+
+async function fetchBlogs() {
+  const response = await fetch(`${baseUrl}/api/blogs`);
+  const allblogs = await response.json();
+  const { blogs } = allblogs;
+  return blogs;
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const blogs = await fetchBlogs(); // Fetch dynamic blogs
+
+  const staticUrls = [
     {
-      url: 'https://www.codewithtabish.com', // Homepage
+      url: `${baseUrl}`, // Homepage
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: 'https://www.codewithtabish.com/projects', // About page
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.codewithtabish.com/blogs', // Blog page
+      url: `${baseUrl}/blogs`, // Blog listing page
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7, // Adjusted priority for blog
+      priority: 0.7,
     },
     {
-      url: 'https://www.codewithtabish.com/courses', // Courses page
-      lastModified: new Date(),
-      changeFrequency: 'monthly', // Adjust based on how often you update this page
-      priority: 0.8,
-    },
-    // Add more pages as necessary
-    {
-      url: 'https://www.codewithtabish.com/contact', // Contact page (if applicable)
+      url: `${baseUrl}/projects`, // Static Projects page
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
+      priority: 0.8,
     },
+    // Add more static URLs for other pages like contact, courses, etc.
   ];
+
+  const blogUrls = blogs.map((blog: any) => ({
+    url: `${baseUrl}/blog/${blog.slug}`, // Dynamic blog URL
+    // lastModified: new Date(blog.updatedAt),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+
+  return [...staticUrls, ...blogUrls]; // Combine static and dynamic URLs
 }
-// next-js-personal-new-protfolio.vercel.app
