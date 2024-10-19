@@ -8,10 +8,10 @@ import { lusitana, outfit } from '@/ui/fonts';
 import Navbar from '@/components/custom/Navbar';
 import { ThemeProvider } from 'next-themes';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { DATA } from '@/data/resume';
 import Script from 'next/script';
 import AdSense from '@/components/custom/AdSense';
 import { Analytics } from '@vercel/analytics/react';
+import MobileHeader from '@/components/custom/MobileHeader';
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
 //   variable: '--font-geist-sans',
@@ -404,6 +404,7 @@ export default function RootLayout({
           defaultTheme='light'
         >
           <TooltipProvider delayDuration={0}>
+            <MobileHeader />
             {children}
             <Navbar />
           </TooltipProvider>

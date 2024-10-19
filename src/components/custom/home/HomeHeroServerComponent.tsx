@@ -26,7 +26,7 @@ const HomeHeroServerComponent = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/personal-info`,
       {
-        cache: 'no-store',
+        cache: 'default',
       }
     );
 
@@ -53,7 +53,7 @@ const HomeHeroServerComponent = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/education`,
       {
-        cache: 'no-store',
+        cache: 'default',
       }
     );
 
