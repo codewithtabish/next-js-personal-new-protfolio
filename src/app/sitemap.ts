@@ -6,7 +6,7 @@ const baseUrl = 'https://www.codewithtabish.com';
 
 async function fetchBlogs() {
   try {
-    const response = await fetch(`${baseUrl}/api/blogs`);
+    const response = await fetch(`${baseUrl}/api/blog`);
     if (!response.ok) {
       console.error('Failed to fetch blogs', response.status);
       return []; // Return empty array if there's an error
