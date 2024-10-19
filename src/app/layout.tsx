@@ -407,6 +407,7 @@ export default function RootLayout({
             <MobileHeader />
             {children}
             <Navbar />
+            <Analytics />
           </TooltipProvider>
         </ThemeProvider>
       </body>
