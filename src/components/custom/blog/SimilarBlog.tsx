@@ -39,7 +39,10 @@ const SimilarBlog = ({ blogs }: { blogs: any }) => {
         <div className=''>
           <CarouselContent className='basis-1/3'>
             {blogs?.map((blog: BlogInterface, index: number) => (
-              <SingleSimilarBlog blog={blog} />
+              <SingleSimilarBlog
+                blog={blog}
+                key={index}
+              />
             ))}
           </CarouselContent>
         </div>
