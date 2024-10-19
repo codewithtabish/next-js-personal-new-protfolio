@@ -5,10 +5,19 @@ import { MetadataRoute } from 'next';
 const baseUrl = 'https://www.codewithtabish.com';
 
 async function fetchBlogs() {
-  const response = await fetch(`${baseUrl}/api/blogs`);
-  const allblogs = await response.json();
-  const { blogs } = allblogs;
-  return blogs;
+  try {
+    const response = await fetch(`${baseUrl}/api/blogs`);
+    if (!response.ok) {
+      console.error('Failed to fetch blogs', response.status);
+      return []; // Return empty array if there's an error
+    }
+    const allblogs = await response.json();
+    const { blogs } = allblogs;
+    return blogs;
+  } catch (error) {
+    console.error('Error fetching blogs:', error);
+    return []; // Return empty array in case of an error
+  }
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
