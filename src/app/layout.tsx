@@ -405,9 +405,11 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={0}>
             <MobileHeader />
-            {children}
-            <Navbar />
-            <Analytics />
+            <div className='m-0 p-0'>
+              {children}
+              <Navbar />
+              <Analytics />
+            </div>
           </TooltipProvider>
         </ThemeProvider>
       </body>

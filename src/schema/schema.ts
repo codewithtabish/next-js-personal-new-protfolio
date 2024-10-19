@@ -40,14 +40,33 @@ export const Projects = pgTable('projects', {
   end_date: timestamp('end_date').notNull(),
 });
 
-// Define Blogs Table
 export const Blogs = pgTable('blogs', {
   id: uuid('id').primaryKey().defaultRandom(),
-  title: varchar('title', { length: 255 }),
-  content: text('content'),
+  title: varchar('title', { length: 255 }).notNull(),
+  content: text('content').notNull(),
   published_at: timestamp('published_at'),
-  tags: json('tags'),
-  slug: varchar('slug', { length: 255 }),
+  tags: json('tags').notNull(), // JSON array of tags for categorization
+  slug: text('slug').notNull(), // SEO-friendly URL slug
+  banner_image: text('banner_image').notNull(), // Blog banner image
+  author: text('author').notNull(), // Author of the blog post
+  status: varchar('status', { length: 50 }).default('draft'), // Post status (draft or published)
+  category: varchar('category', { length: 255 }), // Blog category
+  is_featured: boolean('is_featured').default(false), // Whether the blog is featured
+
+  // SEO fields
+  seo_title: text('seo_title'), // SEO title
+  seo_description: text('seo_description'), // SEO description
+  seo_keywords: text('seo_keywords'), // Comma-separated keywords for SEO
+  canonical_url: text('canonical_url'), // Canonical URL for avoiding duplicate content issues
+  seo_image: text('seo_image'), // Image for SEO and social media sharing
+  structured_data: json('structured_data'), // JSON for schema.org structured data (rich snippets)
+  og_title: text('og_title'), // Open Graph title (for social media sharing)
+  og_description: text('og_description'), // Open Graph description (for social media sharing)
+  og_image: text('og_image'), // Open Graph image (for social media sharing)
+  og_type: varchar('og_type', { length: 50 }).default('article'), // Open Graph type (usually "article" for blogs)
+  twitter_card: varchar('twitter_card', { length: 50 }).default(
+    'summary_large_image'
+  ), // Twitter card type (summary, summary_large_image)
 });
 
 // Define Experience Table

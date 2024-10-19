@@ -6,6 +6,7 @@ import {
   PersonalInfo,
   Projects,
   Skills,
+  Blogs,
   Testimonials,
 } from './schema';
 
@@ -15,6 +16,7 @@ const myschema = {
   Projects,
   Skills,
   Testimonials,
+  Blogs,
   Education,
   Experience,
 };
