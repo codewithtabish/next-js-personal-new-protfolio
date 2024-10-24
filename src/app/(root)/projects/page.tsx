@@ -2,7 +2,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 const page = () => {
   const url = 'https://monitoryour.website/api/events';
@@ -17,13 +17,12 @@ const page = () => {
   };
 
   const sendRequest = async () => {
-    alert('yes');
-    // axios
-    //   .post(url, eventData, { headers })
-    //   .then()
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //   });
+    axios
+      .post(url, eventData, { headers })
+      .then()
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
   return (
     <div className='max-w-6xl mx-auto py-12'>
