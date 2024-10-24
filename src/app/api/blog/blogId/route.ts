@@ -75,5 +75,6 @@ export async function GET() {
   return NextResponse.json({
     status: true,
     message: 'this is the ap blog id',
+    message: 'this is the ap blog id',
   });
 }
