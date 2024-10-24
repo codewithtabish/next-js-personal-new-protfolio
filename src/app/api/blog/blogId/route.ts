@@ -1,5 +1,7 @@
 /** @format */
 
+import { NextResponse } from 'next/server';
+
 // /** @format */
 
 // import { db } from '@/config/db';
@@ -69,4 +71,9 @@
 //   }
 // }
 
-export async function GET() {}
+export async function GET() {
+  return NextResponse.json({
+    status: true,
+    message: 'this is single blog',
+  });
+}
