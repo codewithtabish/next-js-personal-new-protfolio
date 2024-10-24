@@ -1,8 +1,29 @@
 /** @format */
 
+import { Button } from '@/components/ui/button';
 import React from 'react';
+import axios from 'axios';
 
 const page = () => {
+  const url = 'https://monitoryour.website/api/events';
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer muf879pmb82rixhbsjye',
+  };
+  const eventData = {
+    name: '', //* required
+    domain: '', //* required
+    description: '', //optional
+  };
+
+  const sendRequest = async () => {
+    axios
+      .post(url, eventData, { headers })
+      .then()
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
   return (
     <div className='max-w-6xl mx-auto py-12'>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quaerat
@@ -24,6 +45,7 @@ const page = () => {
         aspernatur sequi maiores vero harum odio facere illum itaque voluptatum
         dolore non? Odit?
       </p>
+      <Button onClick={sendRequest}>Add Project</Button>
     </div>
   );
 };
