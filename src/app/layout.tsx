@@ -394,6 +394,11 @@ export default function RootLayout({
           name='google-adsense-account'
           content='ca-pub-5517689121320829'
         />
+        <Script
+          defer
+          data-domain='codewithtabish.com'
+          src='https://monitoryour.website/tracking-script.js'
+        />
 
         <AdSense pId='pub-5517689121320829' />
       </head>
