@@ -6,7 +6,7 @@ const baseUrl = 'https://www.codewithtabish.com';
 
 async function fetchBlogs() {
   try {
-    const response = await fetch(`${baseUrl}/api/blog`);
+    const response = await fetch(`${baseUrl}/api/blogs`);
     if (!response.ok) {
       console.error('Failed to fetch blogs', response.status);
       return []; // Return empty array if there's an error
@@ -46,7 +46,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const blogUrls = blogs.map((blog: any) => ({
-    url: `${baseUrl}/blog/${blog.slug}`, // Dynamic blog URL
+    url: `${baseUrl}/blogs/${blog.slug}`, // Dynamic blog URL
     // lastModified: new Date(blog.updatedAt),
     changeFrequency: 'weekly',
     priority: 0.7,

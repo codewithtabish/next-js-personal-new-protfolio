@@ -3,7 +3,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const ProjectLayout = ({ children }: { children: React.ReactNode }) => {
+const ProjectLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       {/* Metadata for SEO */}
@@ -35,7 +35,7 @@ const ProjectLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <meta
           property='og:image'
-          content='https://www.codewithtabish.com/images/project-banner.png'
+          content='https://www.codewithtabish.com/images/blog-b1.jpg'
         />
         <meta
           property='twitter:card'
