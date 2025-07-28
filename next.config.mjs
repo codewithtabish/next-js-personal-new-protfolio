@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://www.talhatabish.pro/:path*',
+        permanent: true, // 301 redirect for SEO
+      },
+    ];
+  },
 };
 
 export default nextConfig;
